@@ -2,10 +2,10 @@
 
 Merupakan aplikasi untuk manajemen data car.
 
-##
+## Database Diagram
 
 aplikasi ini menggunakan MongoDB sebagai database nya dan ini adalah diagramnya:
-![Alt text](public/images/cars.png)
+![diagram](public/images/cars.png)
 
 ### untuk menjalankan aplikasi ini lakukan langkah-langkah berikut
 
