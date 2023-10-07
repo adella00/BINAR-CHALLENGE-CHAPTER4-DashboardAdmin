@@ -15,8 +15,9 @@ const carSchema = new mongoose.Schema(
       type: Number,
       required: [true, "Harga nya harus ada"],
     },
-    image: {
+    imageUrl: {
       type: String,
+      default: "https://tse2.mm.bing.net/th?id=OIP.U2iQ7wNK6ZzTW_traW_-PQHaHa&pid=Api&P=0&h=180",
     },
   },
   { timestamps: true }

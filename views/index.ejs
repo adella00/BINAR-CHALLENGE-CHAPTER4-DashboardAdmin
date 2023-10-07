@@ -44,7 +44,7 @@
                             <div class="d-flex ">
                                 <form class="d-flex" role="search">
                                     <input class="form-control" name="name" type="search" placeholder="Search" aria-label="Search">
-                                    <button class="btn btn-outline-success" type="submit" id="search">Search</button>
+                                    <button class="btn btn-outline-success" type="submit">Search</button>
                                 </form>
                                 <ul class="navbar-nav dropdown__profile">
                                     <li class="nav-item dropdown">
@@ -103,23 +103,21 @@
                             </div>
 
                             <div class="d-flex button__group">
-                                <form role="search">
-                                    <input class="btn button__secondary me-3" type="button" for="search" name="category" value="All">
-                                    <input class="btn button__secondary me-3" type="button" for="search" name="category" value="Small">
-                                    <input class="btn button__secondary me-3">Medium</input>
-                                    <input class="btn button__secondary me-3">Large</input>
-                                </form>
-                               
+                                <form role="search"></form>
+                                <a href="/dashboard" class="btn button__secondary me-3">All</a>
+                                <a href="?category=small" class="btn button__secondary me-3">Small</a>
+                                <a href="?category=medium" class="btn button__secondary me-3">Medium</a>
+                                <a href="?category=large" class="btn button__secondary me-3">Large</a>
                             </div>
 
                             <div class="row mt-4">
                                 <% cars.map((car)=> {%>
                                     <div class="col-lg-4 my-2">
                                         <div class="card px-2 py-4">
-                                            <img height="222px" src="" class="card-img-top text-center" style="aspect-ratio: 2/1; object-fit: contain;">
+                                            <img height="222px" src="<%= car.imageUrl %>" class="card-img-top text-center" style="aspect-ratio: 2/1; object-fit: contain;">
                                             <div class="card-body">
                                                 <h5 class="card- title h5__tipe">
-                                                    <%= car.name %> /  <%= car.category %>
+                                                    <%= car.name %> / <%= car.category %>
                                                 </h5>
                                                 <h5 class="card-title h5__hari">Rp
                                                     <%= car.price %> / hari</h5>

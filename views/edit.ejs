@@ -95,7 +95,7 @@
                                 </h5>
                             </div>
 
-                            <form action="/cars/update/<%= car.id %>" method="post" enctype="">
+                            <form action="/cars/update/<%= car.id %>" method="post" enctype="multipart/form-data">
                                 <div class="bg__white mt-2">
                                     <div class="row">
                                         <div class="col-lg-6">
@@ -121,7 +121,9 @@
                                                 </div>
                                                 <div class="col-lg-8">
                                                     <select name="category" class="form-select" aria-label="Default select example">
-                                                        
+                                                        <option value="Small" <% if(car.category==="Small"){ %> selected <% } %>>Small</option>
+                                                        <option value="Medium" <% if(car.category==="Medium"){ %> selected <% } %>>Medium</option>
+                                                        <option value="Large" <% if(car.category==="Large"){ %> selected <% } %>>Large</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -130,7 +132,7 @@
                                                     <p>Foto<i style="color: #FA2C5A;">*</i></p>
                                                 </div>
                                                 <div class="col-lg-8">
-                                                    <input name="image" class="form-control" type="file" id="formFile" value="<%= car.image %>">
+                                                    <input name="image" class="form-control" type="file" id="formFile" value="<%= car.imageUrl %>" >
                                                     <small>File size max. 2MB</small>
                                                 </div>
                                             </div>
